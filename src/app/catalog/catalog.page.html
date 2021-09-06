@@ -1,0 +1,26 @@
+<div>
+
+  <h1>Welcome, {{username}}!</h1>
+
+  <h4>Collect a Pokemon:</h4>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+    <div class="col" *ngFor="let pokemon of pokemons">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <img src="./pokemon-sprites/{{pokemon.id}}.svg" alt="" height="100" />
+          <p class="card-text"><strong>{{pokemon.name}}</strong></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary" (click)="onCollectClick(pokemon.id)">Collect</button>
+            </div>
+            <small class="text-muted">
+              <img *ngIf="pokemon.selected" src="./assets/Poke_Ball_icon.svg" alt="" height="20" />
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

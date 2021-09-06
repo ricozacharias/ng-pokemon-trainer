@@ -1,0 +1,18 @@
+<div>
+
+  <h1>Welcome, {{username}}!</h1>
+
+  <h4>Here are your collected Pokemons:</h4>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+    <div class="col" *ngFor="let pokemon of pokemons">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <img src="./pokemon-sprites/{{pokemon.id}}.svg" alt="" height="100" />
+          <p class="card-text"><strong>{{pokemon.name}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

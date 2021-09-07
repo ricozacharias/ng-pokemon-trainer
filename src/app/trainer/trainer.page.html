@@ -4,7 +4,13 @@
 
   <h4>Here are your collected Pokemons:</h4>
 
+  <div *ngIf="pokemons.length === 0"><i>You haven't collected any Pokemons.</i>
+    <br />
+    <a href="/catalog">&gt;&gt; Go on and get some!</a>
+  </div>
+
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+        
     <div class="col" *ngFor="let pokemon of pokemons">
       <div class="card shadow-sm">
         <div class="card-body">

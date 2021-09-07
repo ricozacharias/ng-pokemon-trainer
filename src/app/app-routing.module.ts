@@ -19,13 +19,12 @@ const routes: Routes = [
     path: 'trainer',
     component: TrainerPage,
     canActivate: [LoginGuard],
-  }
-  /*
+  },
   {
     path: '**',
     pathMatch: 'full',
     redirectTo: `/login`
-  } */
+  }
 ];
 
 @NgModule({
